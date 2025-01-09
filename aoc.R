@@ -23,7 +23,7 @@ cat("You chose:", filename, "\n")
 
 data <- read_input(sprintf("./day%02d/%s", day, filename))
 
-cat("Part 1: ", solve1(data), "\n")
+cat("Part 1: ", gsub("\\D", "", solve1(data)), "\n")
 
-cat("Part 2: ", solve2(data), "\n")
+cat("Part 2: ", gsub("\\D", "", solve2(data)), "\n")
 

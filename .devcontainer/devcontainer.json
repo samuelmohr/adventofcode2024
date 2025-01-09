@@ -1,0 +1,25 @@
+// copied from https://jamesgoldie.dev/writing/dev-containers-in-r/
+
+{
+	"name": "R AOC Environment",
+    "image": "ghcr.io/rocker-org/devcontainer/r-ver:4.2",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+            "packages": "libudunits2-dev,libxtst6,libxt6,libmagick++-dev"
+        },
+        "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+            "packages": "github::rstudio/renv,tidyverse,here,httpgd"
+        },
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"mechatroner.rainbow-csv",
+				"mhutchie.git-graph"
+			]
+        },
+        "codespaces": {
+            "openFiles": ["README.md"]
+        }
+    }
+}
